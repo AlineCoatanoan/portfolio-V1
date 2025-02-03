@@ -46,7 +46,7 @@ const Accueil = () => {
 
       {/* Animation de la description */}
       <motion.p
-        className="text-white sm:text-3xl md:text-4xl mb-12 sm:mb-6 font-special bg-black bg-opacity-70 p-4 rounded-lg" // Fond noir semi-transparent et texte blanc
+        className="text-white sm:text-8xl md:text-4xl mb-12 sm:mb-6 font-special bg-black bg-opacity-70 p-4 rounded-lg" // Fond noir semi-transparent et texte blanc
         initial={{ opacity: 0, y: '20%' }}
         animate={{ opacity: 1, y: '0%' }}
         transition={{ duration: 1, delay: 1.2 }}
