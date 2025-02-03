@@ -36,7 +36,7 @@ const Accueil = () => {
 
       {/* Animation du titre */}
       <motion.h1
-        className="text-white sm:text-6xl md:text-7xl font-special mb-8 sm:mb-4 bg-black bg-opacity-70 p-4 rounded-lg" // Fond noir semi-transparent et texte blanc
+        className="text-white text-5xl sm:text-6xl md:text-7xl font-special mb-8 sm:mb-4 bg-black bg-opacity-70 p-4 rounded-lg" // Fond noir semi-transparent et texte blanc
         initial={{ opacity: 0, y: '20%' }}
         animate={{ opacity: 1, y: '0%' }}
         transition={{ duration: 1, delay: 1 }}
