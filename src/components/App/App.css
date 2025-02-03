@@ -1,0 +1,109 @@
+/* Importation des polices depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+html, body {
+  overflow-x: hidden; /* Empêche le scroll horizontal */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  scroll-behavior: smooth; /* Permet l'animation de défilement fluide */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Styles spécifiques pour les petits écrans */
+  .portfolio-card {
+    width: 100%;
+  }
+}
+
+.contact-icons {
+  width: 300px; /* Taille par défaut */
+  height: 300px; /* Taille par défaut */
+  overflow: hidden;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 300px; /* Taille initiale du cercle */
+  height: 300px; /* Taille initiale du cercle */
+}
+
+@media (max-width: 768px) {
+  .contact-icons {
+    width: 200px; /* Réduire la taille du cercle sur mobile */
+    height: 200px; /* Réduire la taille du cercle sur mobile */
+  }
+
+  .contact-icons .rounded-full {
+    width: 40px; /* Taille des icônes réduite sur mobile */
+    height: 40px; /* Taille des icônes réduite sur mobile */
+  }
+}
+
+/* Animation fade-in */
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Animation zoom-in */
+.zoom-in {
+  animation: zoomIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Optionnel : Ajout d'un petit effet de transition pour améliorer l'animation */
+section {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
