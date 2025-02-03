@@ -6,7 +6,7 @@ const Accueil = () => {
     <section 
       id="accueil"
       className="min-h-screen flex flex-col justify-center items-center text-center bg-[#0A3B42] bg-cover bg-center" // Ajout du fond d'écran avec bg-cover et bg-center
-      style={{ backgroundImage: 'url(/assets/dessin.jpg)' }} // Remplace '/path/to/dessin.jpg' par le chemin de ton image
+      style={{ backgroundImage: 'url(assets/dessin.jpg)' }} // Remplace '/path/to/dessin.jpg' par le chemin de ton image
     >
       {/* Texte qui rebondit */}
       <motion.div
