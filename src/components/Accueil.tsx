@@ -20,7 +20,7 @@ const Accueil = () => {
         }}
       >
         <motion.p
-          className="text-2xl sm:text-3xl md:text-4xl font-bold bg-black bg-opacity-50 p-4 rounded-lg" // Fond noir semi-transparent avec un peu de padding
+          className="text-white sm:text-3xl md:text-4xl font-bold bg-black bg-opacity-70 p-4 rounded-lg" // Fond noir semi-transparent et couleur du texte blanche
           initial={{ x: '40%' }}
           animate={{ x: '-40%' }}
           transition={{
@@ -36,7 +36,7 @@ const Accueil = () => {
 
       {/* Animation du titre */}
       <motion.h1
-        className="text-4xl sm:text-6xl md:text-7xl font-special mb-8 sm:mb-4 bg-black bg-opacity-50 p-4 rounded-lg" // Fond noir semi-transparent avec un peu de padding
+        className="text-white sm:text-6xl md:text-7xl font-special mb-8 sm:mb-4 bg-black bg-opacity-70 p-4 rounded-lg" // Fond noir semi-transparent et texte blanc
         initial={{ opacity: 0, y: '20%' }}
         animate={{ opacity: 1, y: '0%' }}
         transition={{ duration: 1, delay: 1 }}
@@ -46,7 +46,7 @@ const Accueil = () => {
 
       {/* Animation de la description */}
       <motion.p
-        className="text-2xl sm:text-3xl md:text-4xl mb-12 sm:mb-6 font-special bg-black bg-opacity-50 p-4 rounded-lg" // Fond noir semi-transparent avec un peu de padding
+        className="text-white sm:text-3xl md:text-4xl mb-12 sm:mb-6 font-special bg-black bg-opacity-70 p-4 rounded-lg" // Fond noir semi-transparent et texte blanc
         initial={{ opacity: 0, y: '20%' }}
         animate={{ opacity: 1, y: '0%' }}
         transition={{ duration: 1, delay: 1.2 }}
