@@ -16,7 +16,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-[#227265] w-full h-24 fixed top-0 left-0 z-50">
+    <header className="bg-[#0A3B42] w-full h-24 fixed top-0 left-0 z-50">
       <div className="flex items-center justify-between max-w-screen-xl mx-auto h-full px-4 relative">
         {/* Logo à gauche */}
         <div className="text-white text-2xl">

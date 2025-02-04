@@ -10,7 +10,7 @@ const Portfolio = () => {
     {
       title: "Survival Parc",
       description:
-        "Projet réalisé dans le cadre de l'obtention au titre professionnel DWWM. \n\nProjet réalisé entièrement seule (Front et Back). Site d'un parc d'attraction fictif. \n\nDéveloppé avec Node.js, express, React, Tailwind, daisyUI, postgres, Jest, JWT, Joi, Bcrypt",
+        "Projet réalisé seule (front et back) dans le cadre de l'obtention au titre professionnel DWWM. \n\nSite d'un parc d'attraction fictif. \n\nDéveloppé avec Node.js, express, React, Tailwind, daisyUI, postgres, Jest, JWT, Joi, Bcrypt",
       liveLink: "https://example.com",
       githubLink: "https://github.com/AlineCoatanoan/survival-parc",
       image: "/assets/parc.png",

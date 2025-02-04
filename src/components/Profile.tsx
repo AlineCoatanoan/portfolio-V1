@@ -42,7 +42,7 @@ const Profile = () => {
               className="text-blue-500 hover:text-blue-700 transition-colors text-lg"
               style={{
                 fontFamily: 'Special Elite',
-                color: '#164748',
+                color: '#1E2A31',
                 textDecoration: 'underline',
                 margin: '0 5px',
               }}
@@ -54,9 +54,8 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#1A5051', // Couleur #1A5051
+                color: '#1E2A31', 
                 margin: '0 5px',
-                fontWeight: 'bold'
               }}
             >
               Titre Professionnel depuis janvier 2025
@@ -66,9 +65,8 @@ const Profile = () => {
               className="text-blue-500 hover:text-blue-700 transition-colors text-lg"
               style={{
                 fontFamily: 'Special Elite',
-                color: '#1A5051',
+                color: '#1E2A31',
                 margin: '0 5px',
-                fontWeight: 'bold',
               }}
             >
               nouveau défi professionnel
@@ -80,9 +78,8 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#1A5051', // Couleur #1A5051
+                color: '#1E2A31', 
                 margin: '0 5px',
-                fontWeight: 'bold'
               }}
             >
               développeuse web Full Stack
@@ -95,9 +92,8 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#1A5051', // Couleur #1A5051
+                color: '#1E2A31', 
                 margin: '0 5px',
-                fontWeight: 'bold'
               }}
             >
               nouveaux défis
@@ -106,9 +102,8 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#1A5051', // Couleur #1A5051
+                color: '#1E2A31', 
                 margin: '0 5px',
-                fontWeight: 'bold'
               }}
             >
               renforcer mes compétences techniques
@@ -139,7 +134,7 @@ const Profile = () => {
           <a
             href="/assets/cv.pdf"
             download
-            className="mt-2 pb-8 text-blue-500 underline hover:text-blue-700 transition-colors"
+            className="mt-2 pb-8 text-[#ffad3f] underline hover:text-blue-700 transition-colors"
           >
             Télécharger le CV
           </a>
