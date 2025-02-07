@@ -27,9 +27,17 @@ const Portfolio = () => {
       title: "My Books",
       description:
         "Projet réalisé lors de ma formation en développement web.\n\nSite web de présentation de mes livres.\n\nDéveloppé avec Node.js, React, Tailwind, GitHub",
-      liveLink: "en cours de déploiement",
+      liveLink: "https://front-books-azure.vercel.app/",
       githubLink: "https://github.com/AlineCoatanoan/front-books",
       image: "/assets/books.png",
+    },
+    {
+      title: "Mon portfolio",
+      description:
+        "Projet réalisé pour me présenter :)\n\nSite web de présentation.\n\nDéveloppé avec React, Tailwind, framer-motion",
+      liveLink: "https://aline-coatanoan-dev-web.vercel.app/",
+      githubLink: "https://github.com/AlineCoatanoan/portfolio-V1",
+      image: "/assets/dessin.jpg",
     },
   ];
 
@@ -156,7 +164,7 @@ const Portfolio = () => {
           >
             {projects.map((project, index) => (
               <div
-                className="card bg-[#1E2A31] p-4 rounded-lg shadow-lg flex-shrink-0 w-full sm:w-[calc(50%-1rem)] sm:mx-1 flex flex-col justify-between"
+                className="card bg-[#1E2A31] p-4 rounded-lg shadow-lg flex-shrink-0 w-full sm:w-[calc(50%-1rem)] sm:mx-2 flex flex-col justify-between"
                 key={index}
               >
                 <div>
