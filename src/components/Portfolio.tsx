@@ -101,7 +101,7 @@ const Portfolio = () => {
     project: { title: string; liveLink: string }
   ) => {
     event.preventDefault();
-    if (project.title === "My Books" || project.title === "Survival Parc") {
+    if (project.title === "Survival Parc") {
       setAlertMessage("Ce projet est en cours de déploiement.");
       setTimeout(() => setAlertMessage(null), 3000);
     } else {
