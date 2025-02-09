@@ -8,11 +8,11 @@ const ContactIcons = () => {
   const [showPhoneModal, setShowPhoneModal] = useState(false);
 
   const icons = [
-    { icon: <FaEnvelope />, link: '#', color: '#39FF14', onClick: () => setShowEmailModal(true) },
-    { icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/aline-coatanoan/', color: '#0077B5' },
-    { icon: <FaPhone />, link: '#', color: '#00FFFF', onClick: () => setShowPhoneModal(true) },
-    { icon: <FaInstagram />, link: 'https://www.instagram.com/aline_coding/', color: '#FF007F' },
-    { icon: <FaFacebookMessenger />, link: 'https://m.me/AlineCoding', color: '#0084FF' },
+    { icon: <FaEnvelope />, link: '#', color: '#EAA33E', onClick: () => setShowEmailModal(true) },
+    { icon: <FaLinkedin />, link: 'https://www.linkedin.com/in/aline-coatanoan/', color: '#0A66C2' },
+    { icon: <FaPhone />, link: '#', color: '#227265', onClick: () => setShowPhoneModal(true) },
+    { icon: <FaInstagram />, link: 'https://www.instagram.com/aline_coding/', color: '#E65166' },
+    { icon: <FaFacebookMessenger />, link: 'https://m.me/AlineCoding', color: '#0076F7' },
     { icon: <FaGithub />, link: 'https://github.com/AlineCoatanoan', color: '#FFFFFF' },
   ];
 
