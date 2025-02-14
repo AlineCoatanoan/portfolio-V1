@@ -111,7 +111,7 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" className="min-h-screen bg-[#227265] text-white p-2">
-      <h2 className="text-4xl text-center mb-8 mt-28 font-special">Mon Portfolio</h2>
+      <h2 className="text-3xl sm:text-6xl text-center mb-8 mt-28 font-special">Mon Portfolio</h2>
 
       {/* Alerte */}
       {(showAlert || alertMessage) && (

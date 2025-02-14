@@ -34,7 +34,7 @@ const ContactIcons = () => {
 
   return (
     <div id="contact" className="flex flex-col items-center justify-center h-screen text-center p-4 bg-[#1D232A]">
-      <h2 className="text-4xl font-specialElite text-white mb-8">Me contacter</h2>
+      <h2 className="text-3xl sm:text-6xl font-special text-white mb-14">Me contacter</h2>
       
       <div className="relative w-[300px] h-[300px] flex justify-center items-center">
         {icons.map((icon, index) => {
