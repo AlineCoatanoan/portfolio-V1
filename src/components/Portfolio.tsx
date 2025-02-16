@@ -1,43 +1,61 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { techIcons, Technology } from "./TechIcon";
+
 
 const Portfolio = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState<string | null>(null);
   const [visibleCards, setVisibleCards] = useState(2); // Valeur par défaut pour les écrans plus larges
+  const [isModalOpen, setIsModalOpen] = useState(false); // Ajouter l'état de la modale
 
   const projects = [
     {
       title: "Survival Parc",
       description:
-        "Projet réalisé seule (front et back) dans le cadre de l'obtention au titre professionnel DWWM. \n\nSite d'un parc d'attraction fictif. \n\nDéveloppé avec Node.js, express, React, Tailwind, daisyUI, postgres, Jest, JWT, Joi, Bcrypt",
+        "Projet réalisé seule (front et back) dans le cadre de l'obtention au titre professionnel DWWM. \n\nSite d'un parc d'attraction fictif. Système d'inscription, connexion, page profil, réservation, dashboard. \n\nDéveloppé avec",
       liveLink: "https://example.com",
       githubLink: "https://github.com/AlineCoatanoan/survival-parc",
       image: "/assets/parc.png",
+      technologies: [
+        "Node.js",
+        "Express",
+        "React",
+        "Tailwind CSS",
+        "DaisyUI",
+        "PostgreSQL",
+        "Jest",
+        "JWT",
+        "Joi",
+        "Bcrypt",
+      ],
     },
     {
       title: "Foodprint",
       description:
-        "Projet réalisé lors de mon stage de 2 mois.\n\nVersion 2 d'un site web pour de la restauration collective, le but étant de permettre le calcul de l'empreinte carbone des plats préparés.\n\nDéveloppé avec Next.js, React, Tailwind, cosmosDB, GitHub",
+        "Projet réalisé lors de mon stage de 2 mois.\n\nVersion 2 d'un site web pour de la restauration collective, le but étant de permettre le calcul de l'empreinte carbone des plats préparés.\n\nDéveloppé avec",
       liveLink: "https://www.foodprint.eco/",
       githubLink: "X", // Pas de lien Github
       image: "/assets/foodprint.jpg",
+      technologies: ["Next.js", "React", "Tailwind CSS", "CosmosDB", "GitHub"],
     },
     {
       title: "My Books",
       description:
-        "Projet réalisé lors de ma formation en développement web.\n\nSite web de présentation de mes livres.\n\nDéveloppé avec Node.js, React, Tailwind, GitHub",
+        "Projet réalisé lors de ma formation en développement web.\n\nSite web de présentation de mes livres.\n\nDéveloppé avec",
       liveLink: "https://front-books-azure.vercel.app/",
       githubLink: "https://github.com/AlineCoatanoan/front-books",
       image: "/assets/books.png",
+      technologies: ["Node.js", "React", "Tailwind CSS", "GitHub"],
     },
     {
       title: "Mon portfolio",
       description:
-        "Projet réalisé pour me présenter :)\n\nSite web de présentation.\n\nDéveloppé avec React, Tailwind, framer-motion",
+        "Projet réalisé pour me présenter :)\n\nSite web de présentation.\n\nDéveloppé avec",
       liveLink: "https://aline-coatanoan-dev-web.vercel.app/",
       githubLink: "https://github.com/AlineCoatanoan/portfolio-V1",
       image: "/assets/dessin.jpg",
+      technologies: ["React", "Tailwind CSS", "Framer Motion"],
     },
   ];
 
@@ -102,16 +120,19 @@ const Portfolio = () => {
   ) => {
     event.preventDefault();
     if (project.title === "Survival Parc") {
-      setAlertMessage("Ce projet est en cours de déploiement.");
-      setTimeout(() => setAlertMessage(null), 3000);
+      setIsModalOpen(true); // Ouvre la modale pour "Survival Parc"
     } else {
       window.open(project.liveLink, "_blank");
     }
   };
 
+  const closeModal = () => {
+    setIsModalOpen(false); // Ferme la modale
+  };
+
   return (
     <section id="portfolio" className="min-h-screen bg-[#227265] text-white p-2">
-      <h2 className="text-3xl sm:text-6xl text-center mb-8 mt-28 font-special">Mon Portfolio</h2>
+      <h2 className="text-3xl sm:text-6xl text-center mb-8 mt-24 font-special">Mon Portfolio</h2>
 
       {/* Alerte */}
       {(showAlert || alertMessage) && (
@@ -121,6 +142,27 @@ const Portfolio = () => {
               ? "Le code de ce projet est confidentiel et ne peut pas être partagé."
               : alertMessage}
           </p>
+        </div>
+      )}
+
+      {/* Modale pour Survival Parc */}
+      {isModalOpen && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-[#227265] p-8 rounded-lg max-w-3xl w-full">
+            <h3 className="text-2xl font-special text-white mb-4">Survival Parc</h3>
+            {/* Ajout de la vidéo */}
+            <video controls className="w-full mb-4">
+              <source src="/assets/survivalparc.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <p className="text-white">Voici un aperçu du projet</p>
+            <button
+              className="mt-4 bg-[#1E2A31] text-white px-4 py-2 rounded-lg"
+              onClick={closeModal}
+            >
+              Fermer
+            </button>
+          </div>
         </div>
       )}
 
@@ -153,7 +195,7 @@ const Portfolio = () => {
         </button>
 
         {/* Carrousel */}
-        <div className="overflow-hidden w-full m-4 max-w-[800px] mb-0">
+        <div className="overflow-hidden w-full m-4 max-w-[800px] mb-6">
           <motion.div
             className="flex"
             initial={{ x: 0 }}
@@ -179,6 +221,33 @@ const Portfolio = () => {
                   <p className={`mb-4 ${project.title === "My Books" ? "mb-8" : ""}`}>
                     {formatDescription(project.description)}
                   </p>
+
+                  {/* Liste des technologies */}
+                  <div className="grid grid-cols-2 gap-2 mb-4">
+                    {project.technologies.map((tech, index) => (
+                      <motion.div
+                        key={index}
+                        className="flex items-center space-x-2 text-sm text-[#66C7B7] font-medium"
+                        animate={{
+                          scale: [1, 1.05, 1],
+                          opacity: [1, 0.7, 1],
+                        }}
+                        transition={{
+                          duration: 1.5,
+                          ease: "easeInOut",
+                          repeat: Infinity,
+                          repeatType: "loop",
+                        }}
+                      >
+                        {/* Vérification si la technologie existe dans techIcons */}
+                        {tech in techIcons ? (
+                          techIcons[tech as Technology] // Afficher l'icône si la technologie existe
+                        ) : null} {/* Ne rien afficher si l'icône n'est pas disponible */}
+                        <span>{tech}</span> {/* Toujours afficher le nom de la technologie */}
+                      </motion.div>
+                    ))}
+                  </div>
+
                 </div>
                 <div className="flex justify-between mt-auto">
                   <a
