@@ -31,7 +31,7 @@ export default function Header() {
 
         {/* Menu desktop */}
         <nav className="hidden lg:flex lg:space-x-8 w-full items-center justify-center font-special">
-          {["Accueil", "Profile", "Skills", "Portfolio", "Contact"].map(
+          {["Accueil", "Profile", "Skills", "Portfolio", "Centres d'intérêts", "Contact"].map(
             (item, index) => (
               <a
                 key={index}
@@ -80,7 +80,7 @@ export default function Header() {
           overflow: "hidden",
         }}
       >
-        {["Accueil", "Profile", "Skills", "Portfolio", "Contact"].map(
+        {["Accueil", "Profile", "Skills", "Portfolio", "Centres d'intérêts", "Contact"].map(
           (item, index) => (
             <a
               key={index}
