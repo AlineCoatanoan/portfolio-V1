@@ -72,7 +72,7 @@ const Interet = () => {
           En ce moment je dévore <span className="text-[#F6A83E]">Silo</span> de Hugh Howey
         </>,
         <>
-          <span className="text-[#F6A83E]">Théâtre</span> : Shakespeare, Feydeau, Musset, Rostand
+          <span className="text-[#F6A83E]">Théâtre</span> : (𝑗'𝑎𝑖 𝑓𝑎𝑖𝑠 𝑢𝑛𝑒 𝑒́𝑐𝑜𝑙𝑒 "𝐴𝑐𝑡𝑖𝑛𝑔 𝐼𝑛𝑡𝑒𝑟𝑛𝑎𝑡𝑖𝑜𝑛𝑎𝑙" 𝑎̀ 𝑃𝑎𝑟𝑖𝑠 𝑝𝑒𝑛𝑑𝑎𝑛𝑡 3 𝑎𝑛𝑠 + 𝑑𝑒𝑠 𝑎𝑛𝑛𝑒́𝑒𝑠 𝑑𝑒 𝑝𝑟𝑎𝑡𝑖𝑞𝑢𝑒𝑠) J'aime lire les oeuvres de Shakespeare, Feydeau, Musset, Rostand
         </>,
         <>
         "L'un de mes livres préférés : <span className="text-[#F6A83E]">Le Maître et Marguerite</span> de Boulgakov",
