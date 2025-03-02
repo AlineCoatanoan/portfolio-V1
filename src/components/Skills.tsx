@@ -125,6 +125,9 @@ const Skills: React.FC = () => {
               </ul>
             </motion.div>
           </div>
+
+          
+
         </motion.div>
       </section>
     </div>

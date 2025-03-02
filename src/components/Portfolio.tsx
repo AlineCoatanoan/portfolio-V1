@@ -51,11 +51,29 @@ const Portfolio = () => {
     {
       title: "Mon portfolio",
       description:
-        "Projet réalisé pour me présenter :)\n\nSite web de présentation.\n\nDéveloppé avec",
+        "Projet réalisé pour me présenter\n\nSite web de présentation.\n\nDéveloppé avec",
       liveLink: "https://aline-coatanoan-dev-web.vercel.app/",
       githubLink: "https://github.com/AlineCoatanoan/portfolio-V1",
       image: "/assets/dessin.jpg",
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
+    },
+    {
+      title: "Dystorzium",
+      description:
+        "Jeu d'énigmes immersif\n\nProjet personnel pour le plaisir.\n\nDéveloppé avec",
+      liveLink: "X",
+      githubLink: "X",
+      image: "/assets/dystorzium.png",
+      technologies: ["React", "Tailwind CSS", "Framer Motion", "GSAP", "Node.js", "Express", "PostgreSQL", "JWT", "Joi", "Bcrypt"],
+    },
+    {
+      title: "Son Filtre",
+      description:
+        "Application mobile\n\nSystème de filtrage avancé pour récupérer les données de la BDD dans le but faciliter le travail des régisseurs son.\n\nDéveloppé avec",
+      liveLink: "X",
+      githubLink: "X",
+      image: "/assets/son.png",
+      technologies: ["React", "Tailwind CSS", "Node.js", "Express", "PostgreSQL"],
     },
   ];
 
@@ -106,8 +124,18 @@ const Portfolio = () => {
     project: { title: string; githubLink: string }
   ) => {
     event.preventDefault();
+
+    if (showAlert) {
+      setShowAlert(false);
+    }
+    
     if (project.title === "Foodprint") {
       setShowAlert(true);
+      setAlertMessage("Le code de ce projet est confidentiel et ne peut pas être partagé.");
+      setTimeout(() => setShowAlert(false), 3000);
+    } else if (project.title === "Dystorzium" || project.title === "Son Filtre") {
+      setShowAlert(true);
+      setAlertMessage("Ce projet est en cours d'élaboration et n'est pas encore disponible.");
       setTimeout(() => setShowAlert(false), 3000);
     } else {
       window.open(project.githubLink, "_blank");
@@ -119,8 +147,17 @@ const Portfolio = () => {
     project: { title: string; liveLink: string }
   ) => {
     event.preventDefault();
+
+    if (showAlert) {
+      setShowAlert(false);
+    }
+    
     if (project.title === "Survival Parc") {
       setIsModalOpen(true); // Ouvre la modale pour "Survival Parc"
+    } else if (project.title === "Dystorzium" || project.title === "Son Filtre") {
+      setShowAlert(true);
+      setAlertMessage("Ce projet est en cours d'élaboration et n'est pas encore disponible.");
+      setTimeout(() => setShowAlert(false), 3000);
     } else {
       window.open(project.liveLink, "_blank");
     }
@@ -135,14 +172,16 @@ const Portfolio = () => {
       <h2 className="text-3xl sm:text-6xl text-center mb-8 mt-24 font-special">Mon Portfolio</h2>
 
       {/* Alerte */}
-      {(showAlert || alertMessage) && (
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#103C3D] text-white p-4 rounded shadow-lg z-50">
-          <p>
-            {showAlert
-              ? "Le code de ce projet est confidentiel et ne peut pas être partagé."
-              : alertMessage}
-          </p>
-        </div>
+      {showAlert && (
+        <motion.div
+          className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#103C3D] text-white p-4 rounded shadow-lg z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <p>{alertMessage}</p>
+        </motion.div>
       )}
 
       {/* Modale pour Survival Parc */}

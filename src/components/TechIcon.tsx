@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FaNodeJs } from 'react-icons/fa'; // Icone Node.js
 import { FaReact } from 'react-icons/fa'; // Icone React
 import { SiTailwindcss } from 'react-icons/si'; // Icone Tailwind CSS
