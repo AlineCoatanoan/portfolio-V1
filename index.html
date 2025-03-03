@@ -1,18 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Bienvenue sur mon portfolio !" />
+    <title>Portfolio - Aline Coatanoan</title>
     <link rel="icon" href="assets/icone.png" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Viewport pour la réactivité -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Preload des polices Google Fonts pour améliorer le temps de rendu -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" as="style" />
+    
+    <!-- Chargement des polices de manière standard -->
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+    <!-- Fichier CSS principal -->
     <link href="/src/components/App/App.css" rel="stylesheet" />
   </head>
   
-  
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Différer le script pour ne pas bloquer le rendu -->
+    <script type="module" src="/src/main.tsx" defer></script>
   </body>
 </html>

@@ -36,13 +36,15 @@ const Accueil = () => {
 
       {/* Animation du titre */}
       <motion.h1
-        className="text-white text-5xl sm:text-6xl md:text-7xl font-special mb-8 sm:mb-4 bg-black bg-opacity-70 p-4 rounded-lg" // Fond noir semi-transparent et texte blanc
-        initial={{ opacity: 0, y: '20%' }}
-        animate={{ opacity: 1, y: '0%' }}
-        transition={{ duration: 1, delay: 1 }}
-      >
-        Aline Coatanoan
-      </motion.h1>
+  className="text-white text-5xl sm:text-6xl md:text-7xl font-special mb-8 sm:mb-4 bg-black p-4 rounded-lg"
+  initial={{ opacity: 0, y: '20%' }}  // Opacité 0 au départ pour créer l'effet d'animation
+  animate={{ opacity: 1, y: 0 }}  // L'élément devient visible avec un léger mouvement
+  transition={{ duration: 0.3 }}  // Durée d'animation plus courte (0.3s)
+>
+  Aline Coatanoan
+</motion.h1>
+
+
 
       {/* Animation de la description */}
       <motion.p

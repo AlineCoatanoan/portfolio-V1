@@ -43,6 +43,13 @@ html, body {
   }
 }
 
+@font-face {
+  font-family: 'Special Elite';
+  src: url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap') format('woff2');
+  font-display: swap;
+}
+
+
 .contact-icons {
   width: 300px; /* Taille par défaut */
   height: 300px; /* Taille par défaut */
