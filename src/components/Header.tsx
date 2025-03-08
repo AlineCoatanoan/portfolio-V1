@@ -21,6 +21,7 @@ export default function Header() {
         {/* Logo à gauche */}
         <div className="text-white text-2xl">
           <a href="#accueil">
+          <span className="sr-only">Retour à l'accueil</span>
           <video
         src="/assets/logo.webm"
         className="w-14 h-14 sm:w-24 sm:h-24 lg:w-24 lg:h-24 xl:w-28 xl:h-30"

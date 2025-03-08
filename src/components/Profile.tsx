@@ -39,10 +39,10 @@ const Profile = () => {
               href="https://oclock.io/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#FDA232] hover:text-[#FDA232] transition-colors text-lg"
+              className="text-[#D17A26] hover:text-[#D17A26] transition-colors text-lg"
               style={{
                 fontFamily: 'Special Elite',
-                color: '#FDA232',
+                color: '#D17A26',
                 textDecoration: 'underline',
                 margin: '0 5px',
               }}
@@ -54,7 +54,7 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#FDA232', 
+                color: '#D17A26', 
                 margin: '0 5px',
               }}
             >
@@ -67,7 +67,7 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#FDA232', 
+                color: '#D17A26', 
                 margin: '0 5px',
               }}
             >
@@ -77,7 +77,7 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#FDA232', 
+                color: '#D17A26', 
                 margin: '0 5px',
               }}
             >
@@ -90,7 +90,7 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#FDA232', 
+                color: '#D17A26', 
                 margin: '0 5px',
               }}
             >
@@ -101,7 +101,7 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#FDA232', 
+                color: '#D17A26', 
                 margin: '0 5px',
               }}
             >
@@ -112,7 +112,7 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#FDA232', 
+                color: '#D17A26', 
                 margin: '0 5px',
               }}
             >
@@ -142,7 +142,7 @@ const Profile = () => {
           <a
             href="/assets/cv.pdf"
             download
-            className="mt-2 pb-8 text-[#ffad3f] underline hover:text-[#FDA232] transition-colors"
+            className="mt-2 pb-8 text-[#D17A26] underline hover:text-[#FDA232] transition-colors"
           >
             Télécharger le CV
           </a>

@@ -71,7 +71,7 @@ const Skills: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {Object.entries(hardSkills).map(([category, skills], index) => (
                   <div key={index} className="flex flex-col space-y-2">
-                    <h3 className="text-xl text-[#1D232A] leading-tight">{category}</h3>
+                    <h3 className="text-xl text-[#D17A26] leading-tight">{category}</h3>
                     <ul className="text-xl text-left list-disc list-inside">
                       {skills.map((skill, skillIndex) => (
                         <motion.li
