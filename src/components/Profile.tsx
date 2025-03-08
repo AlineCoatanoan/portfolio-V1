@@ -15,7 +15,7 @@ const Profile = () => {
       {/* Section Profil */}
       <section
         id="profile"
-        className="min-h-screen flex flex-col sm:pt-20 lg:flex-row items-center justify-center bg-[#227265] px-4 sm:px-6 md:px-8"
+        className="min-h-screen flex flex-col sm:pt-20 lg:flex-row items-center justify-center bg-[#0C3E45] px-4 sm:px-6 md:px-8"
       >
         <div className="flex-1 flex flex-col items-center justify-center text-center pt-6">
           <motion.h2
@@ -39,10 +39,10 @@ const Profile = () => {
               href="https://oclock.io/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#D17A26] hover:text-[#D17A26] transition-colors text-lg"
+              className="text-[#FDA232] hover:text-[#FDA232] transition-colors text-lg"
               style={{
                 fontFamily: 'Special Elite',
-                color: '#D17A26',
+                color: '#FDA232',
                 textDecoration: 'underline',
                 margin: '0 5px',
               }}
@@ -54,7 +54,7 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#D17A26', 
+                color: '#FDA232', 
                 margin: '0 5px',
               }}
             >
@@ -67,7 +67,7 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#D17A26', 
+                color: '#FDA232', 
                 margin: '0 5px',
               }}
             >
@@ -77,7 +77,7 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#D17A26', 
+                color: '#FDA232', 
                 margin: '0 5px',
               }}
             >
@@ -90,7 +90,7 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#D17A26', 
+                color: '#FDA232', 
                 margin: '0 5px',
               }}
             >
@@ -101,7 +101,7 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#D17A26', 
+                color: '#FDA232', 
                 margin: '0 5px',
               }}
             >
@@ -112,7 +112,7 @@ const Profile = () => {
               className="text-lg"
               style={{
                 fontFamily: 'Special Elite', 
-                color: '#D17A26', 
+                color: '#FDA232', 
                 margin: '0 5px',
               }}
             >
@@ -142,7 +142,7 @@ const Profile = () => {
           <a
             href="/assets/cv.pdf"
             download
-            className="mt-2 pb-8 text-[#D17A26] underline hover:text-[#FDA232] transition-colors"
+            className="mt-2 pb-8 text-[#ffad3f] underline hover:text-[#FDA232] transition-colors"
           >
             Télécharger le CV
           </a>

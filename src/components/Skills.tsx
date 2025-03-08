@@ -48,7 +48,7 @@ const Skills: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 p-8">
             {/* Hard Skills */}
             <motion.div
-              className="flex flex-col items-center justify-between p-6 bg-[#227265] rounded-lg hover:shadow-2xl transition-all sm:col-span-2 lg:col-span-1"
+              className="flex flex-col items-center justify-between p-6 bg-[#0C3E45] rounded-lg hover:shadow-2xl transition-all sm:col-span-2 lg:col-span-1"
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               whileHover={{ scale: 1.05 }}
