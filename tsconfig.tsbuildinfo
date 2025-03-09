@@ -1,0 +1,1 @@
+{"root":["./src/vite-env.d.ts","./src/main.tsx","./src/components/accueil.tsx","./src/components/contact.tsx","./src/components/footer.tsx","./src/components/header.tsx","./src/components/interet.tsx","./src/components/portfolio.tsx","./src/components/profile.tsx","./src/components/skills.tsx","./src/components/techicon.tsx","./src/components/app/app.tsx"],"version":"5.7.3"}

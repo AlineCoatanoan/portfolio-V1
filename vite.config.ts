@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   css: {
@@ -11,4 +10,16 @@ export default defineConfig({
       plugins: [tailwindcss, autoprefixer],
     },
   },
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true, // Supprime les `console.log`, `console.debug`, etc. dans la version de production
+      },
+      output: {
+        comments: false, // Supprime les commentaires du code
+      },
+    },
+  },
 });
+

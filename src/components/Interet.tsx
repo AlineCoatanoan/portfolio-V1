@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import interetImg from "../../public/assets/interet.png";
 
 const Interet = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -76,7 +75,7 @@ const Interet = () => {
         </>,
         <>
         "L'un de mes livres préférés : <span className="text-[#F6A83E]">Le Maître et Marguerite</span> de Boulgakov",
-        </>
+        </>,
       ],
     },
     {
@@ -156,12 +155,12 @@ const Interet = () => {
       <div
         className="absolute inset-0 bg-center opacity-20"
         style={{
-            backgroundImage: `url(${interetImg})`,
+            backgroundImage: `url(/assets/interet.png)`,
             backgroundSize: "100%", // Ajuste cette valeur pour changer la taille
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
         }}
-        ></div>
+      ></div>
 
       <h2 className="text-3xl sm:text-6xl text-center mb-12 mt-24 font-special relative z-10">
         Mes centres d'intérêts
@@ -170,23 +169,21 @@ const Interet = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left relative z-10">
         {interests.map((item, index) => (
           <div
-          key={index}
-          ref={(el) => {
-            if (el) itemsRef.current[index] = el;
-          }}
-          className={`p-6 bg-[rgba(30,42,49,0.4)] rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:rotate-2 
-            ${index === interests.length - 1 ? "md:col-span-3 mx-auto" : ""}`}
-        >
-        
+            key={index}
+            ref={(el) => {
+              if (el) itemsRef.current[index] = el;
+            }}
+            className={`p-6 bg-[rgba(30,42,49,0.4)] rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:rotate-2 
+              ${index === interests.length - 1 ? "md:col-span-3 mx-auto" : ""}`}
+          >
             <h3 className="text-xl sm:text-2xl font-semibold card-title mb-4">{item.title}</h3>
             <ul
-            className={`list-none text-sm sm:text-base leading-relaxed text-gray-200 ${
+              className={`list-none text-sm sm:text-base leading-relaxed text-gray-200 ${
                 item.title === "🎥 Chaînes YouTube" || item.title === "📺 Séries"
-                ? "grid grid-cols-3 gap-4"
-                : "space-y-3"
-            }`}
+                  ? "grid grid-cols-3 gap-4"
+                  : "space-y-3"
+              }`}
             >
-
               {item.content.map((contentItem, i) => (
                 <li key={i}>{contentItem}</li>
               ))}
