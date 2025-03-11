@@ -20,7 +20,7 @@ const Accueil = () => {
         }}
       >
         <motion.p
-          className="text-white sm:text-3xl md:text-4xl font-bold bg-black bg-opacity-70 p-4 rounded-lg" // Fond noir semi-transparent et couleur du texte blanche
+          className="text-white sm:text-3xl md:text-4xl  bg-black bg-opacity-70 p-4 rounded-lg" // Fond noir semi-transparent et couleur du texte blanche
           initial={{ x: '40%' }}
           animate={{ x: '-40%' }}
           transition={{
