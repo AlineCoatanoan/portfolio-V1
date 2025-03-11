@@ -191,7 +191,7 @@ const Portfolio = () => {
             <h3 className="text-2xl font-special text-white mb-4">Survival Parc</h3>
             {/* Ajout de la vidéo */}
             <video controls className="w-full mb-4">
-              <source src="/assets/survivalparc.webm" type="video/webm" />
+              <source src="/assets/survivalparc.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la lecture de vidéos.
             </video>
             <p className="text-white">Voici un aperçu du projet</p>
