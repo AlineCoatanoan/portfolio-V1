@@ -245,9 +245,9 @@ const Portfolio = () => {
           >
             {projects.map((project, index) => (
               <div
-                className="card bg-[#1E2A31] p-4 rounded-lg shadow-lg flex-shrink-0 w-full sm:w-[calc(50%-1rem)] sm:mx-2 flex flex-col justify-between"
-                key={index}
-              >
+              className="card bg-[#1E2A31] p-4 rounded-lg shadow-lg flex-shrink-0 w-full sm:w-[calc(50%-1rem)] sm:mx-2 flex flex-col justify-between"
+              key={index}
+            >
                 <div>
                   <div className="w-full h-48 flex items-center justify-center bg-[#1E2A31] rounded-t-lg mb-4">
                     <img

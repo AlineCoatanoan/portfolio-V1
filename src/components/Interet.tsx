@@ -202,7 +202,7 @@ const Interet = () => {
           </Swiper>
 
           {/* Flèche pour swiper */}
-          <div className="absolute top-[100%] left-0 right-0 flex justify-center items-center">
+          <div className="absolute top-[120%] left-0 right-0 flex justify-center items-center">
             <span className="text-4xl text-white animate-pulse">
               <MdOutlineSwipe />
             </span>
