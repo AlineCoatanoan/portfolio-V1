@@ -1,9 +1,25 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { MdOutlineSwipe } from "react-icons/md";
 
 const Interet = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const itemsRef = useRef<HTMLDivElement[]>([]);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (!sectionRef.current) return;
@@ -68,13 +84,13 @@ const Interet = () => {
           <span className="text-[#F6A83E]">Auteurs</span> : Orwell, Huxley, Asimov, Zamiatine
         </>,
         <>
-          En ce moment je dévore <span className="text-[#F6A83E]">Silo</span> de Hugh Howey
+          <span className="text-[#F6A83E]">Silo</span> de Hugh Howey
         </>,
         <>
-          <span className="text-[#F6A83E]">Théâtre</span> : (𝑗'𝑎𝑖 𝑓𝑎𝑖𝑠 𝑢𝑛𝑒 𝑒́𝑐𝑜𝑙𝑒 "𝐴𝑐𝑡𝑖𝑛𝑔 𝐼𝑛𝑡𝑒𝑟𝑛𝑎𝑡𝑖𝑜𝑛𝑎𝑙" 𝑎̀ 𝑃𝑎𝑟𝑖𝑠 𝑝𝑒𝑛𝑑𝑎𝑛𝑡 3 𝑎𝑛𝑠 + 𝑑𝑒𝑠 𝑎𝑛𝑛𝑒́𝑒𝑠 𝑑𝑒 𝑝𝑟𝑎𝑡𝑖𝑞𝑢𝑒𝑠) J'aime lire les oeuvres de Shakespeare, Feydeau, Musset, Rostand
+        <span className="text-[#F6A83E]">Le Maître et Marguerite</span> de Boulgakov,
         </>,
         <>
-        "L'un de mes livres préférés : <span className="text-[#F6A83E]">Le Maître et Marguerite</span> de Boulgakov",
+          <span className="text-[#F6A83E]">Théâtre</span> : Shakespeare, Feydeau, Musset, Rostand
         </>,
       ],
     },
@@ -96,7 +112,7 @@ const Interet = () => {
       title: "🎵 Musique",
       content: [
         <>
-        <span className="text-[#F6A83E]">Rock</span> : Queen, Pink Floyd, Muse...,
+          <span className="text-[#F6A83E]">Rock</span> : Queen, Pink Floyd, Muse...,
         </>,
         <>
           <span className="text-[#F6A83E]">Jazz</span> : Louis Armstrong, Nina Simone, Tony Bennett, Norah Jones...
@@ -127,22 +143,6 @@ const Interet = () => {
         "Stranger Things",
       ],
     },
-    {
-      title: "🎨 DIY",
-      content: [
-        "Tricoter",
-        <>
-          <span className="text-[#F6A83E]">Coding perso.</span> En ce moment :
-        </>,
-        <>
-          <span className="text-[#F6A83E]">jeu</span> + 
-        </>,
-        <>
-          <span className="text-[#F6A83E]">application</span> d'aide aux régisseurs sons pour les concerts
-        </>,
-        
-      ],
-    },
   ];
 
   return (
@@ -166,31 +166,77 @@ const Interet = () => {
         Mes centres d'intérêts
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left relative z-10">
-        {interests.map((item, index) => (
-          <div
-            key={index}
-            ref={(el) => {
-              if (el) itemsRef.current[index] = el;
-            }}
-            className={`p-6 bg-[rgba(30,42,49,0.4)] rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:rotate-2 
-              ${index === interests.length - 1 ? "md:col-span-3 mx-auto" : ""}`}
+      {isMobile ? (
+        <div className="relative w-full">
+          <Swiper
+            spaceBetween={16}
+            slidesPerView={1}
+            loop={true}
+            className="w-full"
           >
-            <h3 className="text-xl sm:text-2xl font-semibold card-title mb-4">{item.title}</h3>
-            <ul
-              className={`list-none text-sm sm:text-base leading-relaxed text-gray-200 ${
-                item.title === "🎥 Chaînes YouTube" || item.title === "📺 Séries"
-                  ? "grid grid-cols-3 gap-4"
-                  : "space-y-3"
-              }`}
-            >
-              {item.content.map((contentItem, i) => (
-                <li key={i}>{contentItem}</li>
-              ))}
-            </ul>
+            {interests.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div
+                  ref={(el) => {
+                    if (el) itemsRef.current[index] = el;
+                  }}
+                  className="p-6 bg-[rgba(30,42,49,0.4)] rounded-lg shadow-lg"
+                >
+                  <h3 className="text-xl sm:text-2xl font-semibold card-title mb-4">
+                    {item.title}
+                  </h3>
+                  <ul
+                    className={`list-none text-sm sm:text-base leading-relaxed text-gray-200 ${
+                      item.title === "🎥 Chaînes YouTube" || item.title === "📺 Séries"
+                        ? "grid grid-cols-3 gap-4"
+                        : "space-y-3"
+                    }`}
+                  >
+                    {item.content.map((contentItem, i) => (
+                      <li key={i}>{contentItem}</li>
+                    ))}
+                  </ul>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Flèche pour swiper */}
+          <div className="absolute top-[100%] left-0 right-0 flex justify-center items-center">
+            <span className="text-4xl text-white animate-pulse">
+              <MdOutlineSwipe />
+            </span>
           </div>
-        ))}
-      </div>
+        </div>
+        
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left relative z-10">
+          {interests.map((item, index) => (
+            <div
+              key={index}
+              ref={(el) => {
+                if (el) itemsRef.current[index] = el;
+              }}
+              className="p-6 bg-[rgba(30,42,49,0.4)] rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:rotate-2"
+            >
+              <h3 className="text-xl sm:text-2xl font-semibold card-title mb-4">
+                {item.title}
+              </h3>
+              <ul
+                className={`list-none text-sm sm:text-base leading-relaxed text-gray-200 ${
+                  item.title === "🎥 Chaînes YouTube" || item.title === "📺 Séries"
+                    ? "grid grid-cols-3 gap-4"
+                    : "space-y-3"
+                }`}
+              >
+                {item.content.map((contentItem, i) => (
+                  <li key={i}>{contentItem}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 };
