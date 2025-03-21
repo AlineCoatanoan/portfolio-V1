@@ -15,6 +15,7 @@ const Portfolio = () => {
       description:
         "Projet réalisé seule (front et back) dans le cadre de l'obtention au titre professionnel DWWM. \n\nSite d'un parc d'attraction fictif. Système d'inscription, connexion, page profil, réservation, dashboard. \n\nDéveloppé avec",
       liveLink: "https://example.com",
+      pdf: "/assets/projet.pdf",
       githubLink: "https://github.com/AlineCoatanoan/survival-parc",
       image: "/assets/parc.png",
       technologies: [
@@ -67,7 +68,7 @@ const Portfolio = () => {
       technologies: ["React", "Tailwind CSS", "Framer Motion", "GSAP", "Node.js", "Express", "PostgreSQL", "JWT", "Joi", "Bcrypt"],
     },
     {
-      title: "Son Filtre",
+      title: "sound hardware filter (nom provisoire)",
       description:
         "Application mobile\n\nSystème de filtrage avancé pour récupérer les données de la BDD dans le but faciliter le travail des régisseurs son.\n\nDéveloppé avec",
       liveLink: "X",
@@ -296,6 +297,17 @@ const Portfolio = () => {
                   >
                     Voir en Ligne
                   </a>
+                  {/* Nouveau bouton "Voir mon projet" pour ouvrir le PDF */}
+                  {project.title === "Survival Parc" && (
+                    <a
+                      href={project.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#103C3D] text-white py-2 px-4 rounded-lg hover:bg-[#227265]"
+                    >
+                      Dossier
+                    </a>
+                  )}
                   <a
                     href={project.githubLink}
                     onClick={(event) => handleGithubClick(event, project)}
