@@ -11,17 +11,27 @@ const VisitCounter: React.FC = () => {
     if (storedCount) {
       setVisitCount(Number(storedCount));
     } else {
-      // Sinon, c'est la première visite, initialiser à 1
+      // Si aucun compteur n'existe, initialiser à 1 et l'enregistrer
       setVisitCount(1);
+      localStorage.setItem('visitCount', '1');
     }
-  }, []); // Le tableau vide [] signifie que cet effet ne s'exécute qu'une seule fois à l'initialisation
+  }, []); // Ce useEffect ne s'exécute qu'une seule fois au premier rendu
 
   useEffect(() => {
-    // Une fois que le compteur de visites est mis à jour, on l'enregistre dans localStorage
+    // Met à jour localStorage avec le compteur actuel chaque fois qu'il change
     if (visitCount > 0) {
       localStorage.setItem('visitCount', visitCount.toString());
     }
-  }, [visitCount]); // Mettre à jour localStorage à chaque changement du compteur
+  }, [visitCount]); // Ce useEffect se déclenche chaque fois que visitCount change.
+
+  useEffect(() => {
+    // Incrémente le compteur de visites uniquement lorsque le composant est monté
+    const currentCount = visitCount + 1;
+    setVisitCount(currentCount);
+
+    // Met à jour localStorage avec le nouveau compteur
+    localStorage.setItem('visitCount', currentCount.toString());
+  }, []); // Ce useEffect se déclenche une seule fois au montage du composant
 
   return (
     <div style={{ color: '#1D232A' }}>
