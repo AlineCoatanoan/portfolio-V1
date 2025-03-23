@@ -7,6 +7,7 @@ import Portfolio from '../Portfolio';
 import Interet from '../Interet';
 import Contact from '../Contact';
 import Footer from '../Footer';
+import VisitCounter from '../visitCounter';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Portfolio />
       <Interet />
       <Contact />
+      <VisitCounter />
       <Footer />
     </div>
   );
