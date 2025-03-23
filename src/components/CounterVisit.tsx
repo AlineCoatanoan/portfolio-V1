@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const VisitCounter: React.FC = () => {  // Le nom du composant commence par une majuscule
+const VisitCounter: React.FC = () => {
   const [visitCount, setVisitCount] = useState<number>(0);
 
   useEffect(() => {
@@ -11,13 +11,17 @@ const VisitCounter: React.FC = () => {  // Le nom du composant commence par une 
     if (storedCount) {
       setVisitCount(Number(storedCount));
     } else {
-      // Sinon, c'est la première visite
+      // Sinon, c'est la première visite, initialiser à 1
       setVisitCount(1);
     }
+  }, []); // Le tableau vide [] signifie que cet effet ne s'exécute qu'une seule fois à l'initialisation
 
-    // Met à jour localStorage avec le nouveau compteur
-    localStorage.setItem('visitCount', (visitCount + 1).toString());
-  }, [visitCount]);
+  useEffect(() => {
+    // Une fois que le compteur de visites est mis à jour, on l'enregistre dans localStorage
+    if (visitCount > 0) {
+      localStorage.setItem('visitCount', visitCount.toString());
+    }
+  }, [visitCount]); // Mettre à jour localStorage à chaque changement du compteur
 
   return (
     <div style={{ color: '#1D232A' }}>
@@ -26,4 +30,4 @@ const VisitCounter: React.FC = () => {  // Le nom du composant commence par une 
   );
 };
 
-export default VisitCounter; // Assure-toi que l'export est aussi avec une majuscule
+export default VisitCounter;
