@@ -1,4 +1,4 @@
-
+import React from 'react';
 import Header from '../Header';
 import Accueil from '../Accueil';
 import Profile from '../Profile';
@@ -7,7 +7,7 @@ import Portfolio from '../Portfolio';
 import Interet from '../Interet';
 import Contact from '../Contact';
 import Footer from '../Footer';
-import VisitCounter from '../visitCounter';
+import VisitCounter from '../CounterVisit';  
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
       <Portfolio />
       <Interet />
       <Contact />
-      <VisitCounter />
+      <VisitCounter />  
       <Footer />
     </div>
   );

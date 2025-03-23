@@ -1,7 +1,6 @@
-// src/components/VisitCounter.tsx
 import React, { useEffect, useState } from 'react';
 
-const VisitCounter: React.FC = () => {
+const VisitCounter: React.FC = () => {  // Le nom du composant commence par une majuscule
   const [visitCount, setVisitCount] = useState<number>(0);
 
   useEffect(() => {
@@ -27,5 +26,4 @@ const VisitCounter: React.FC = () => {
   );
 };
 
-export default VisitCounter;
-
+export default VisitCounter; // Assure-toi que l'export est aussi avec une majuscule
