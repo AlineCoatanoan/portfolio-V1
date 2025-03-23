@@ -7,25 +7,25 @@ const VisitCounter: React.FC = () => {
     // Récupère le compteur de visites dans localStorage
     const storedCount = localStorage.getItem('visitCount');
 
-    // Si un compteur existe déjà dans localStorage, l'utiliser
     if (storedCount) {
-      setVisitCount(Number(storedCount)); // Utilise le compteur déjà existant
+      // Si un compteur existe déjà dans localStorage, l'utiliser
+      setVisitCount(Number(storedCount));
     } else {
       // Si aucun compteur n'existe, initialiser à 1 et l'enregistrer
-      setVisitCount(1);
       localStorage.setItem('visitCount', '1');
+      setVisitCount(1);
     }
   }, []); // Ce useEffect s'exécute uniquement lors du premier chargement
 
-  // Mettre à jour le compteur à chaque visite
   useEffect(() => {
-    // Incrémente le compteur à chaque visite (si plus de 1)
-    if (visitCount > 0) {
-      const newCount = visitCount + 1;
-      localStorage.setItem('visitCount', newCount.toString()); // Enregistre dans localStorage
-      setVisitCount(newCount); // Met à jour l'état local
+    // Incrémente la valeur du compteur au lancement de la page
+    const storedCount = localStorage.getItem('visitCount');
+    if (storedCount) {
+      const updatedCount = Number(storedCount) + 1;
+      localStorage.setItem('visitCount', updatedCount.toString());
+      setVisitCount(updatedCount);  // Met à jour l'état local du compteur
     }
-  }, [visitCount]); // Ce useEffect s'exécute chaque fois que le compteur change
+  }, []); // Ce useEffect s'exécute une seule fois au premier rendu
 
   return (
     <div style={{ color: '#1D232A' }}>
