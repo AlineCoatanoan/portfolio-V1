@@ -34,7 +34,7 @@ const Portfolio = () => {
     {
       title: "Foodprint",
       description:
-        "Projet réalisé lors de mon stage de 2 mois.\n\nVersion 2 d'un site web pour de la restauration collective, le but étant de permettre le calcul de l'empreinte carbone des plats préparés.\n\nDéveloppé avec",
+        "Projet réalisé lors de mon stage de 2 mois.\n\n\nVersion 2 d'un site web pour de la restauration collective, le but étant de permettre le calcul de l'empreinte carbone des plats préparés.\n\nDéveloppé avec",
       liveLink: "https://www.foodprint.eco/",
       githubLink: "X", // Pas de lien Github
       image: "/assets/foodprint.jpg",
@@ -43,7 +43,7 @@ const Portfolio = () => {
     {
       title: "My Books",
       description:
-        "Projet réalisé lors de ma formation en développement web.\n\nSite web de présentation de mes livres.\n\nDéveloppé avec",
+        "Projet réalisé lors de ma formation en développement web.\n\nSite web de présentation de mes livres.\n\n\n\nDéveloppé avec",
       liveLink: "https://front-books-azure.vercel.app/",
       githubLink: "https://github.com/AlineCoatanoan/front-books",
       image: "/assets/books.png",
@@ -52,7 +52,7 @@ const Portfolio = () => {
     {
       title: "Mon portfolio",
       description:
-        "Projet réalisé pour me présenter\n\nSite web de présentation.\n\nDéveloppé avec",
+        "Projet réalisé pour me présenter\n\n\nSite web de présentation.\n\n\n\nDéveloppé avec",
       liveLink: "https://aline-coatanoan-dev-web.vercel.app/",
       githubLink: "https://github.com/AlineCoatanoan/portfolio-V1",
       image: "/assets/dessin.jpg",
@@ -61,16 +61,16 @@ const Portfolio = () => {
     {
       title: "Dystorzium",
       description:
-        "Jeu d'énigmes immersif\n\nProjet personnel pour le plaisir.\n\nDéveloppé avec",
+        "Jeu d'énigmes immersif\n\n\nProjet personnel pour le plaisir.\n\n\n\nDéveloppé avec",
       liveLink: "X",
       githubLink: "X",
       image: "/assets/dystorzium.png",
       technologies: ["React", "Tailwind CSS", "Framer Motion", "GSAP", "Node.js", "Express", "PostgreSQL", "JWT", "Joi", "Bcrypt"],
     },
     {
-      title: "sound hardware filter (nom provisoire)",
+      title: "sound hardware filter",
       description:
-        "Application mobile\n\nSystème de filtrage avancé pour récupérer les données de la BDD dans le but faciliter le travail des régisseurs son.\n\nDéveloppé avec",
+        "Application mobile\n\nSystème de filtrage avancé pour récupérer les données de la BDD dans le but faciliter le travail des régisseurs son.\n\n\nDéveloppé avec",
       liveLink: "X",
       githubLink: "X",
       image: "/assets/son.png",
