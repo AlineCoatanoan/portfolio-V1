@@ -50,6 +50,15 @@ const Portfolio = () => {
       technologies: ["Node.js", "React", "Tailwind CSS", "GitHub"],
     },
     {
+      title: "Eco-Conso-Perso",
+      description:
+        "Projet personnel pour le plaisir.\n\n\nSite web calculant l'empreinte écologique personnelle pour mieux consommer et réduire son impact. \n\nDéveloppé avec",
+        liveLink: "https://eco-conso-perso.vercel.app/",
+        githubLink: "https://github.com/AlineCoatanoan/eco-conso-perso/tree/master",
+        image: "/assets/home.png",
+        technologies: ["React", "Tailwind CSS", "Framer Motion", "vite", "Recharts", "jsPDF & html2canvas", "React Circular Progressbar"],
+    },
+    {
       title: "Mon portfolio",
       description:
         "Projet réalisé pour me présenter\n\n\nSite web de présentation.\n\n\n\nDéveloppé avec",
