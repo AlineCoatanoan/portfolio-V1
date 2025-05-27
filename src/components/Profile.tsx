@@ -120,6 +120,12 @@ const Profile = () => {
             </span>.
             <br />
             <br />
+            Je suis également
+            <span className="text-lg" style={{ fontFamily: 'Special Elite', color: '#FDA232', margin: '0 5px' }}>
+              ouverte à un premier poste en tant que développeuse web junior
+            </span>, afin de mettre en pratique mes compétences et continuer à progresser sur des projets concrets.
+
+            <br />
             À très bientôt !
           </motion.p>
         </div>
@@ -130,7 +136,7 @@ const Profile = () => {
           onClick={toggleZoom}
         >
           <motion.img
-            src="/assets/cv.jpg"
+            src="/assets/cv.png"
             alt="Mon CV"
             className="max-w-[60%] sm:max-w-[50%] md:max-w-[40%] h-auto mb-4 pt-22 transition-transform duration-300"
             initial={{ opacity: 0 }}
@@ -159,7 +165,7 @@ const Profile = () => {
           onClick={toggleZoom}
         >
           <motion.img
-            src="/assets/cv.jpg"
+            src="/assets/cv.png"
             alt="Mon CV Agrandi"
             className="max-w-full max-h-full object-contain"
             initial={{ scale: 0 }}

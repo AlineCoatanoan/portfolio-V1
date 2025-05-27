@@ -5,9 +5,9 @@ const Skills: React.FC = () => {
   const softSkills = [
     "<span class='text-[#FDA232] font-bold text-xl'>l'empathie</span> 🤝 pour comprendre les besoins individuels,",
     "<span class='text-[#FDA232] font-bold text-xl'>l'adaptabilité</span> 🔄 face aux situations urgentes,",
-    "<span class='text-[#FDA232] font-bold text-xl'>la communication</span> 💬 et la <span class='text-[#FDA232] font-bold text-xl'>remise en question</span> pour interagir avec les personnes accompagnées mais aussi avec mes collègues, et ainsi permettre un travail en <span class='text-[#FDA232] font-bold text-xl'>collaboration avec l’équipe</span> 👥",
+    "<span class='text-[#FDA232] font-bold text-xl'>la communication</span> et la <span class='text-[#FDA232] font-bold text-xl'>remise en question</span> pour interagir avec les personnes accompagnées mais aussi avec mes collègues, et ainsi permettre un travail en <span class='text-[#FDA232] font-bold text-xl'>collaboration avec l’équipe</span> 👥",
     "Faire preuve de <span class='text-[#FDA232] font-bold text-xl'>patience, et de persévérance</span> 💪 étaient des compétences primordiales dans le secteur social. Les personnes ont des problématiques importantes qui demandent du temps et une réflexion pour trouver des solutions.",
-    "Avoir une <span class='text-[#FDA232] font-bold text-xl'>organisation 📅 rigoureuse et être consciencieuse</span> 🧐 m'ont aidée à gérer efficacement mon temps et mes priorités. Dans l’éducation spécialisée, il faut jongler entre urgence, rédaction de rapport, accompagnement au quotidien, rendez-vous, réunion...",
+    "Avoir une <span class='text-[#FDA232] font-bold text-xl'>organisation rigoureuse et être consciencieuse</span> 🧐 m'ont aidée à gérer efficacement mon temps et mes priorités. Dans l’éducation spécialisée, il faut jongler entre urgence, rédaction de rapport, accompagnement au quotidien, rendez-vous, réunion...",
     "Et un <span class='text-[#FDA232] font-bold text-xl'>sens de l'humour</span> et une <span class='text-[#FDA232] font-bold text-xl'>positivité</span> 😄 m'ont permis de maintenir une ambiance agréable même dans les moments les plus difficiles."
   ];
 
@@ -99,7 +99,7 @@ const Skills: React.FC = () => {
 
             {/* Soft Skills Card */}
             <motion.div
-              className="flex flex-col items-center justify-between p-6 bg-[#1F595A] rounded-lg hover:shadow-2xl transition-all sm:col-span-2 lg:col-span-1"
+              className="flex flex-col items-center text-justify justify-between p-6 bg-[#1F595A] rounded-lg hover:shadow-2xl transition-all sm:col-span-2 lg:col-span-1"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               whileHover={{ scale: 1.05 }}
@@ -128,11 +128,12 @@ const Skills: React.FC = () => {
 
               <ul className="text-l text-left list-disc list-inside space-y-16 mt-0 list-[circle]">
                 {softSkills.map((skill, index) => (
-                  <motion.li key={index} whileHover={{ scale: 1.2, x: -10 }} >
+                  <li key={index}>
                     <span dangerouslySetInnerHTML={{ __html: skill }} />
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
+
             </motion.div>
           </div>
         </motion.div>

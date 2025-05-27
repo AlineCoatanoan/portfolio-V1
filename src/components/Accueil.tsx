@@ -30,8 +30,9 @@ const Accueil = () => {
             ease: 'easeInOut',
           }}
         >
-          En recherche d'entreprise pour une alternance<br /> 
-          CDA (Concepteur Développeur d'Applications)
+          En recherche d'entreprise pour un contrat de professionnalisation<br /> 
+          CDA (Concepteur Développeur d'Applications)<br /><br />
+          OU PREMIER POSTE
         </motion.p>
       </motion.div>
 
