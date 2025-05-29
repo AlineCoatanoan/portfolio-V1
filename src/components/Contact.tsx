@@ -35,7 +35,7 @@ const ContactIcons = () => {
 
   return (
     <div id="contact" className="flex flex-col items-center justify-center h-screen text-center p-4 bg-[#1D232A]">
-      <h2 className="text-3xl sm:text-6xl font-special text-white mb-14">Me contacter</h2>
+      <h2 className="text-3xl sm:text-6xl font-special text-white mb-14 mt-8">Me contacter</h2>
       
       <div className="relative w-[300px] h-[300px] flex justify-center items-center">
         {icons.map((icon, index) => {
@@ -67,9 +67,23 @@ const ContactIcons = () => {
             </motion.div>
           );
         })}
+        <motion.img
+          src="/assets/dessin.jpg"
+          alt="Dessin décoratif"
+          className="absolute -right-[460px] top-2/5 -translate-y-1/2 w-[300px] md:w-[350px] lg:w-[400px] opacity-90 pointer-events-none drop-shadow-[0_0_12px_rgba(0,0,0,0.9)]"
+
+
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: 'easeOut', delay: 1.5 }}
+        />
       </div>
-      
-      <p className="text-lg text-white mt-12">Vous pouvez me contacter via plusieurs plateformes en cliquant sur les icônes ci-dessus.</p>
+
+
+      <p className="text-lg text-white relative" style={{ paddingTop: '140px' }}>
+      Vous pouvez me contacter via plusieurs plateformes en cliquant sur les icônes ci-dessus.
+      </p>
+
 
       {/* Modale Email */}
       {showEmailModal && (

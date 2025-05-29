@@ -14,7 +14,7 @@ const Profile = () => {
     <div>
       {/* Section Profil */}
       <section
-        id="profile"
+        id="profil"
         className="min-h-screen flex flex-col sm:pt-20 lg:flex-row items-center justify-center bg-[#0C3E45] px-4 sm:px-6 md:px-8"
       >
         <div className="flex-1 flex flex-col items-center justify-center text-center pt-6">

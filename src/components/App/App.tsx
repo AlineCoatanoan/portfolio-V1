@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Header';
 import Accueil from '../Accueil';
-import Profile from '../Profile';
+import Profil from '../Profil';
 import Skills from '../Skills';
 import Portfolio from '../Portfolio';
 import Interet from '../Interet';
@@ -14,7 +14,7 @@ const App = () => {
     <div>
       <Header />
       <Accueil />
-      <Profile />
+      <Profil />
       <Skills />
       <Portfolio />
       <Interet />
