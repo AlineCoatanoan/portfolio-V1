@@ -2,56 +2,74 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
 import leafAnimation from '../animations/leaf.json'; 
+import ModelViewer3D from './ModelViewer3D';
+
 
 const Accueil = () => {
   return (
-    <section 
+   <section
       id="accueil"
-      className="min-h-screen flex flex-col justify-center items-center text-center bg-[#0E343B] bg-cover bg-center" 
-      //style={{ backgroundImage: 'url(/assets/dessin.jpg)' }} 
+      className="min-h-screen flex flex-col justify-center items-center text-center bg-[#1D232A] bg-center bg-no-repeat gap-2 mt-8"
+      style={{
+      backgroundImage: "url('/assets/fond.png')",
+      backgroundSize: '1400px',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'bottom center',
+    }}
+
     >
 
-     <motion.div
-        className="relative w-full overflow-hidden mb-12 sm:mb-8"
-        initial={{ opacity: 1 }}
-        animate={{ scale: [1, 1.05, 1] }}
-        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <p className="text-white max-w-fit mx-auto sm:text-3xl md:text-4xl bg-black bg-opacity-10 p-4 rounded-lg">
-          En recherche d'entreprise pour un contrat de professionnalisation<br />
-          <br />
-          OU PREMIER POSTE
-        </p>
-      </motion.div>
 
       {/* Animation du titre */}
       <motion.h1
-        className="text-white text-5xl sm:text-6xl md:text-7xl font-special bg-opacity-10 mb-8 sm:mb-4 bg-black p-4 rounded-lg"
+        className="text-white text-4xl sm:text-6xl md:text-7xl font-special bg-opacity-10 mb-12 max-sm:mb-4 bg-black px-3 py-2 sm:p-4 rounded-lg"
         initial={{ opacity: 0, y: '20%' }}  // Opacité 0 au départ pour créer l'effet d'animation
         animate={{ opacity: 1, y: 0 }}  // L'élément devient visible avec un léger mouvement
-        transition={{ duration: 0.3 }}  // Durée d'animation plus courte (0.3s)
+        transition={{ duration: 0.3 }}  // Durée d'animation
       >
         Aline Coatanoan
       </motion.h1>
 
       {/* Animation de la description */}
-      <motion.p
-        className="text-white sm:text-8xl md:text-4xl mb-12 sm:mb-6 font-special bg-black bg-opacity-10 p-4 rounded-lg" // Fond noir semi-transparent et texte blanc
-        initial={{ opacity: 0, y: '20%' }}
-        animate={{ opacity: 1, y: '0%' }}
-        transition={{ duration: 1, delay: 1.2 }}
-      >
-        Développeuse web full stack
+    <motion.p
+      className="text-white text-lg sm:text-xl md:text-2xl font-special bg-black bg-opacity-10 mb-10 max-sm:mb-4 px-3 py-2 sm:p-4 rounded-lg"
+      initial={{ opacity: 0, y: '20%' }}
+      animate={{ opacity: 1, y: '0%' }}
+      transition={{ duration: 1, delay: 1.2 }}
+    >
+      Développeuse web full stack
+    </motion.p>
 
-      </motion.p>
+     
+      
+      <motion.div
+        className="relative w-full overflow-hidden mb-8 sm:mb-4 "
+        initial={{ opacity: 1 }}
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        <p className="text-white font-special max-w-fit mx-auto text-xl sm:text-1xl md:text-2xl bg-black bg-opacity-10 px-3 py-2 sm:p-4 rounded-lg">
+          En recherche d'entreprise <br />
+          pour un contrat de professionnalisation
+        </p>
+      </motion.div>
+
+      
 
       {/* Animation Lottie en bas */}
       <div
-        className="absolute bottom-0 right-0"
-        style={{ width: '400px', height: '400px' }} // entre 96px (w-24) et 104px (w-26)
+      className="hidden sm:block absolute bottom-0 right-0 w-[400px] h-[400px]"
       >
         <Lottie animationData={leafAnimation} loop={true} />
       </div>
+
+      <img
+        src="/assets/accueil.png"
+        alt="Accueil"
+        className="block sm:hidden w-full max-w-xs rounded-lg"
+      />
+
+
 
     </section>
   );

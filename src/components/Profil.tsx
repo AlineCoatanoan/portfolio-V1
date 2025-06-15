@@ -95,7 +95,7 @@ const Profile = () => {
               }}
             >
               alternance en Concepteur Développeur d'Applications (CDA)
-            </span> à partir d’
+            </span> 
             
             <span
               className="text-lg"
@@ -105,7 +105,7 @@ const Profile = () => {
                 margin: '0 5px',
               }}
             >
-              octobre 2025
+              pour la rentrée 2025
             </span> avec un rythme de
 
             <span
@@ -120,11 +120,7 @@ const Profile = () => {
             </span>.
             <br />
             <br />
-            Je suis également
-            <span className="text-lg" style={{ fontFamily: 'Special Elite', color: '#FDA232', margin: '0 5px' }}>
-              ouverte à un premier poste en tant que développeuse web junior
-            </span>, afin de mettre en pratique mes compétences et continuer à progresser sur des projets concrets.
-
+            
             <br />
             À très bientôt !
           </motion.p>
