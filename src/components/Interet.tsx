@@ -155,11 +155,11 @@ const Interet = () => {
     >
 
         {/* Image mascotte en position absolue */}
-  <img
-    src="/assets/mascotte-interet.png"
-    alt="Mascotte Intérêts"
-    className="absolute bottom-4 right-4 w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 opacity-80 pointer-events-none select-none z-20"
-  />
+    <img
+      src="/assets/mascotte-interet.png"
+      alt="Mascotte Intérêts"
+      className="absolute bottom-4 right-4 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 opacity-80 pointer-events-none select-none z-20"
+    />
 
       {/* Image en arrière-plan avec transparence */}
       <div
