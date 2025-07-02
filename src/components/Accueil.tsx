@@ -53,21 +53,23 @@ const Accueil = () => {
         </p>
       </motion.div>
 
-      
-
-      {/* Animation Lottie en bas */}
-      <div
-      className="hidden sm:block absolute bottom-0 right-0 w-[400px] h-[400px]"
-      >
-        <Lottie animationData={leafAnimation} loop={true} />
+      {/* Mascotte version mobile*/}
+      <div className="block md:hidden">
+        <img
+          src="/assets/mascotte.png"
+          alt="Mascotte Aline"
+          className="mx-auto w-[16rem]"
+        />
       </div>
 
-      <img
-        src="/assets/accueil.png"
-        alt="Accueil"
-        className="block sm:hidden w-full max-w-xs rounded-lg"
-      />
-
+      {/* Mascotte version desktop*/}
+      <div className="hidden md:block absolute bottom-0 left-0 z-10">
+        <img
+          src="/assets/mascotte.png"
+          alt="Mascotte Aline"
+          className="w-[10rem] md:w-[14rem] lg:w-[20rem] object-contain"
+        />
+      </div>
 
 
     </section>
