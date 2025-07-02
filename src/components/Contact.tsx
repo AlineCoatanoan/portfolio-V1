@@ -68,8 +68,8 @@ const ContactIcons = () => {
           );
         })}
         <motion.img
-          src="/assets/dessin.jpg"
-          alt="Dessin décoratif"
+          src="/assets/mascotte-contact.png"
+          alt="Mascotte au téléphone"
           className="absolute -right-[460px] top-2/5 -translate-y-1/2 w-[300px] md:w-[350px] lg:w-[400px] opacity-90 pointer-events-none drop-shadow-[0_0_12px_rgba(0,0,0,0.9)]"
 
 
