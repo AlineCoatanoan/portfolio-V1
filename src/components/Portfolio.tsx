@@ -143,7 +143,7 @@ const Portfolio = () => {
       setShowAlert(true);
       setAlertMessage("Le code de ce projet est confidentiel et ne peut pas être partagé.");
       setTimeout(() => setShowAlert(false), 3000);
-    } else if (project.title === "Dystorzium" || project.title === "Son Filtre") {
+    } else if (project.title === "Dystorzium" || project.title === "sound hardware filter") {
       setShowAlert(true);
       setAlertMessage("Ce projet est en cours d'élaboration et n'est pas encore disponible.");
       setTimeout(() => setShowAlert(false), 3000);
@@ -164,7 +164,7 @@ const Portfolio = () => {
     
     if (project.title === "Survival Parc") {
       setIsModalOpen(true); // Ouvre la modale pour "Survival Parc"
-    } else if (project.title === "Dystorzium" || project.title === "Son Filtre") {
+    } else if (project.title === "Dystorzium" || project.title === "sound hardware filter") {
       setShowAlert(true);
       setAlertMessage("Ce projet est en cours d'élaboration et n'est pas encore disponible.");
       setTimeout(() => setShowAlert(false), 3000);
