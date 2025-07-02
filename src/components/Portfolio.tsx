@@ -178,8 +178,15 @@ const Portfolio = () => {
   };
 
   return (
-    <section id="portfolio" className="min-h-screen bg-[#227265] text-white p-2">
-      <h2 className="text-3xl sm:text-6xl text-center mb-8 mt-24 font-special">Mon Portfolio</h2>
+      <section id="portfolio" className="min-h-screen bg-[#227265] text-white p-2 relative">
+    
+    {/* Image mascotte*/}
+        <img
+          src="/assets/mascotte-stack.png"
+          alt="Mascotte Aline"
+          className="absolute top-[8.5rem] left-1/2 -translate-x-1/2 sm:left-[4rem] sm:translate-x-0 w-36 h-36 sm:w-70 sm:h-70 md:w-96 md:h-96 lg:w-[20rem] lg:h-[20rem] z-10"
+        />
+        <h2 className="text-3xl sm:text-6xl text-center mb-8 mt-24 font-special">Mon Portfolio</h2>
 
       {/* Alerte */}
       {showAlert && (
@@ -255,7 +262,7 @@ const Portfolio = () => {
           >
             {projects.map((project, index) => (
               <div
-              className="card bg-[#1E2A31] p-4 rounded-lg shadow-lg flex-shrink-0 w-full sm:w-[calc(50%-1rem)] sm:mx-2 flex flex-col justify-between"
+              className="card relative bg-[#1E2A31] p-4 rounded-lg shadow-lg flex-shrink-0 w-full sm:w-[calc(50%-1rem)] sm:mx-2 flex flex-col justify-between"
               key={index}
             >
                 <div>
