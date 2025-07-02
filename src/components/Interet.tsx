@@ -68,14 +68,17 @@ const Interet = () => {
   }, []);
 
   const interests = [
-    {
-      title: "🏋️‍♂️ Sports",
+        {
+      title: "📺 Séries",
       content: [
-        "Pilates",
-        "Musculation",
-        "Randonnées (trek)",
+        "Severance",
+        "Breaking Bad",
+        "Handmaid's Tale",
+        "The Big Bang Theory",
+        "Last of Us",
+        "Friends",
+        "Stranger Things",
       ],
-      gap: "12px",
     },
     {
       title: "📚 Lecture",
@@ -131,18 +134,17 @@ const Interet = () => {
         "Jeux de société en tous genres",
       ],
     },
+    
     {
-      title: "📺 Séries",
+      title: "🏋️‍♂️ Sports",
       content: [
-        "Severance",
-        "Breaking Bad",
-        "Friends",
-        "The Big Bang Theory",
-        "Last of Us",
-        "Handmaid's Tale",
-        "Stranger Things",
+        "Pilates",
+        "Musculation",
+        "Randonnées (trek)",
       ],
+      gap: "12px",
     },
+
   ];
 
   return (
@@ -151,6 +153,14 @@ const Interet = () => {
       id="centres d'intérêts"
       className="relative min-h-screen bg-[#0C3E45] text-white p-2 flex flex-col items-center justify-center pb-8"
     >
+
+        {/* Image mascotte en position absolue */}
+  <img
+    src="/assets/mascotte-interet.png"
+    alt="Mascotte Intérêts"
+    className="absolute bottom-4 right-4 w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 opacity-80 pointer-events-none select-none z-20"
+  />
+
       {/* Image en arrière-plan avec transparence */}
       <div
         className="absolute inset-0 bg-center opacity-20"
