@@ -49,7 +49,7 @@ const Accueil = () => {
         transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
       >
         <p className="text-white font-special max-w-fit mx-auto text-xl sm:text-1xl md:text-2xl bg-black bg-opacity-10 px-3 py-2 sm:p-4 rounded-lg">
-          En recherche d'opportunité <br />
+          En recherche d'un contrat d'apprentissage <br />
         </p>
       </motion.div>
 
