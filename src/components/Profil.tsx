@@ -15,7 +15,7 @@ const Profile = () => {
       {/* Mascotte à gauche, plus petite */}
     <motion.div
       className="flex-shrink-0 flex justify-center lg:justify-start w-full lg:w-1/4 cursor-pointer
-                mt-16 lg:mt-0"  // <== ici on ajoute mt-10 seulement sur mobile, plus d’espace en haut
+                mt-16 lg:mt-0"  
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
@@ -24,7 +24,7 @@ const Profile = () => {
       <motion.img
         src="/assets/mascotte-profil.png"
         alt="Mascotte Profil"
-        className="w-20 sm:w-32 md:w-44 lg:w-full h-auto" // <== w-20 sur mobile, plus petit
+        className="w-20 sm:w-32 md:w-44 lg:w-full h-auto" 
         whileHover={{ scale: 1.05 }}
       />
     </motion.div>
@@ -150,7 +150,7 @@ const Profile = () => {
         onClick={() => setIsModalOpenCV(true)}
       >
         <motion.img
-          src="/assets/cv.jpg"
+          src="/assets/cv.png"
           alt="Mon CV"
           className="max-w-[80%] sm:max-w-[70%] md:max-w-[60%] h-auto mb-4 pt-22 transition-transform duration-300"
           initial={{ opacity: 0 }}
@@ -202,7 +202,7 @@ const Profile = () => {
           style={{ cursor: "pointer" }}
         >
           <motion.img
-            src="/assets/cv.jpg"
+            src="/assets/cv.png"
             alt="Mon CV Agrandi"
             className="max-w-full max-h-full object-contain"
             initial={{ scale: 0 }}
