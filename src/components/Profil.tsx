@@ -10,7 +10,7 @@ const Profile = () => {
       {/* Section Profil */}
     <section
       id="profil"
-      className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-[#0C3E45] px-4 sm:px-6 md:px-8 pt-10 gap-8"
+      className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-[#0C3E45] px-4 sm:px-6 md:px-8 pt-16 gap-8"
     >
       {/* Mascotte à gauche, plus petite */}
     <motion.div
@@ -49,7 +49,7 @@ const Profile = () => {
           style={{ lineHeight: "1.8" }}
         >
           {/* Ton texte inchangé ici */}
-          Bonjour, je suis développeuse Web formée chez{" "}
+          Bonjour, je suis développeuse Web Full Stack {" "}
           <a
             href="https://oclock.io/"
             target="_blank"
@@ -62,19 +62,8 @@ const Profile = () => {
               margin: "0 5px",
             }}
           >
-            O'Clock
+            (BAC +2)
           </a>
-          et diplômée du{" "}
-          <span
-            className="text-lg"
-            style={{
-              fontFamily: "Special Elite",
-              color: "#FDA232",
-              margin: "0 5px",
-            }}
-          >
-            Titre Professionnel depuis janvier 2025
-          </span>
           .
           <br />
           <br />
@@ -104,7 +93,7 @@ const Profile = () => {
           .
           <br />
           <br />
-          Je suis actuellement à la recherche d’une entreprise pour un{" "}
+          Je suis actuellement à la recherche d’une entreprise pour un <br />{" "}
           <span
             className="text-lg"
             style={{
@@ -113,7 +102,7 @@ const Profile = () => {
               margin: "0 5px",
             }}
           >
-            contrat d'apprentissage Concepteur Développeur d'Applications - option Éco-conception des services numériques
+            contrat d'apprentissage Concepteur Développeur d'Applications - <br />option Éco-conception des services numériques
           </span>{" "}
           <span
             className="text-lg"
@@ -123,8 +112,11 @@ const Profile = () => {
               margin: "0 5px",
             }}
           >
+            <br />
+            <br />
             La rentrée est le 13 Octobre 2025
           </span>{" "}
+          <br />
           avec un rythme de
           <span
             className="text-lg"
@@ -138,6 +130,16 @@ const Profile = () => {
             1 semaine école / 3 semaines en entreprise
           </span>
           .
+          <br />
+          Plus d'info sur la formation ici :{" "}
+          <a
+            href="https://drive.google.com/drive/folders/1Rhpc-AuOZjL-L0sIydMQHQtQ1vZ5b_Xa"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#FDA232", textDecoration: "underline" }}
+          >
+            consulter
+          </a>
           <br />
           <br />
           À très bientôt !
