@@ -104,7 +104,7 @@ const Profile = () => {
           .
           <br />
           <br />
-          Je suis actuellement à la recherche d’une entreprise pour une{" "}
+          Je suis actuellement à la recherche d’une entreprise pour un{" "}
           <span
             className="text-lg"
             style={{
@@ -113,7 +113,7 @@ const Profile = () => {
               margin: "0 5px",
             }}
           >
-            alternance en Concepteur Développeur d'Applications (CDA)
+            contrat d'apprentissage Concepteur Développeur d'Applications - option Éco-conception des services numériques
           </span>{" "}
           <span
             className="text-lg"
@@ -123,7 +123,7 @@ const Profile = () => {
               margin: "0 5px",
             }}
           >
-            pour la rentrée 2025
+            La rentrée est le 13 Octobre 2025
           </span>{" "}
           avec un rythme de
           <span
@@ -135,7 +135,7 @@ const Profile = () => {
             }}
           >
             {" "}
-            1 semaine école / 2 semaines en entreprise
+            1 semaine école / 3 semaines en entreprise
           </span>
           .
           <br />
