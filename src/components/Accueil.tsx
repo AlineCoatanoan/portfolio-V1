@@ -50,6 +50,7 @@ const Accueil = () => {
       >
         <p className="text-white font-special max-w-fit mx-auto text-xl sm:text-1xl md:text-2xl bg-black bg-opacity-10 px-3 py-2 sm:p-4 rounded-lg">
           En recherche d'un contrat d'apprentissage <br />
+          <br /> Conceptrice Développeuse d'Applications
         </p>
       </motion.div>
 
