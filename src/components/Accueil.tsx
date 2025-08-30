@@ -28,19 +28,7 @@ const Accueil = () => {
         transition={{ duration: 0.3 }}  // Durée d'animation
       >
         Aline Coatanoan
-      </motion.h1>
-
-      {/* Animation de la description */}
-    <motion.p
-      className="text-white text-lg sm:text-xl md:text-2xl font-special bg-black bg-opacity-10 mb-10 max-sm:mb-4 px-3 py-2 sm:p-4 rounded-lg"
-      initial={{ opacity: 0, y: '20%' }}
-      animate={{ opacity: 1, y: '0%' }}
-      transition={{ duration: 1, delay: 1.2 }}
-    >
-      Développeuse web full stack
-    </motion.p>
-
-     
+      </motion.h1>  
       
       <motion.div
         className="relative w-full overflow-hidden mb-8 sm:mb-4 "
@@ -49,8 +37,8 @@ const Accueil = () => {
         transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
       >
         <p className="text-white font-special max-w-fit mx-auto text-xl sm:text-1xl md:text-2xl bg-black bg-opacity-10 px-3 py-2 sm:p-4 rounded-lg">
-          En recherche d'un contrat d'apprentissage <br />
-          <br /> Conceptrice Développeuse d'Applications
+           En alternance <br /> <br />Conception et Développement d’Applications (option éco-conception) <br /><br />
+           QA & Tests fonctionnels/automatisés
         </p>
       </motion.div>
 

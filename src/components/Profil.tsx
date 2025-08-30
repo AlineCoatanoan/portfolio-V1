@@ -42,112 +42,35 @@ const Profile = () => {
         </motion.h2>
 
         <motion.p
-          className="text-base sm:text-lg md:text-xl font-light mb-2 mt-4 text-gray-200 max-w-full"
+          className="text-base sm:text-lg md:text-lg font-light mb-2 mt-4 text-gray-200 max-w-full"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
           style={{ lineHeight: "1.8" }}
         >
-          {/* Ton texte inchangé ici */}
-          Bonjour, je suis développeuse Web Full Stack {" "}
-          <a
-            href="https://oclock.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#FDA232] hover:text-[#FDA232] transition-colors text-lg"
-            style={{
-              fontFamily: "Special Elite",
-              color: "#FDA232",
-              textDecoration: "underline",
-              margin: "0 5px",
-            }}
-          >
-            (BAC +2)
-          </a>
-          .
-          <br />
-          <br />
-          Prête à relever de{" "}
-          <span
-            className="text-lg"
-            style={{
-              fontFamily: "Special Elite",
-              color: "#FDA232",
-              margin: "0 5px",
-            }}
-          >
-            nouveaux défis
-          </span>{" "}
-          et ouverte à différents secteurs, je souhaite aujourd'hui continuer mon
-          apprentissage afin de{" "}
-          <span
-            className="text-lg"
-            style={{
-              fontFamily: "Special Elite",
-              color: "#FDA232",
-              margin: "0 5px",
-            }}
-          >
-            renforcer mes compétences techniques
-          </span>
-          .
-          <br />
-          <br />
-          Je suis actuellement à la recherche d’une entreprise pour un <br />{" "}
-          <span
-            className="text-lg"
-            style={{
-              fontFamily: "Special Elite",
-              color: "#FDA232",
-              margin: "0 5px",
-            }}
-          >
-            contrat d'apprentissage Concepteur Développeur d'Applications - <br />option Éco-conception des services numériques
-          </span>{" "}
-          <span
-            className="text-lg"
-            style={{
-              fontFamily: "Special Elite",
-              color: "#FDA232",
-              margin: "0 5px",
-            }}
-          >
-            <br />
-            <br />
-            La rentrée est le 13 Octobre 2025
-          </span>{" "}
-          <br />
-          avec un rythme de
-          <span
-            className="text-lg"
-            style={{
-              fontFamily: "Special Elite",
-              color: "#FDA232",
-              margin: "0 5px",
-            }}
-          >
-            {" "}
-            1 semaine école / 3 semaines en entreprise
-          </span>
-          .
-          <br />
-          Plus d'info sur la formation ici :{" "}
-          <a
-            href="https://drive.google.com/drive/folders/1Rhpc-AuOZjL-L0sIydMQHQtQ1vZ5b_Xa"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "#FDA232", textDecoration: "underline" }}
-          >
-            consulter
-          </a>
-          <br />
-          <br />
-          À très bientôt !
+          J'ai quitté la <span style={{ color: "#FDA232", fontFamily: "Special Elite" }}>Bretagne</span> à 22 ans pour rejoindre une école de théâtre et de cinéma à Paris.
+          3 ans plus tard, je me suis tournée vers l'<span style={{ color: "#FDA232", fontFamily: "Special Elite" }}>éducation spécialisée</span>, où j'ai passé dix ans à accompagner, écouter, transmettre.
+          Une belle aventure humaine, riche d'enseignements, mais il était temps d'admettre que ce n'était pas mon terrain de jeu.<br/><br/>
+
+          Ce qui m'anime vraiment ? <span style={{ color: "#FDA232", fontFamily: "Special Elite" }}>Créer</span>, bidouiller, comprendre ce qui se cache derrière l'écran.
+          Le genre de métier que tu observes de loin en te disant :
+          <em>« Ça a l'air cool… mais pas pour moi, non ? »</em> jusqu'au jour où tu décides que si, en fait, c'est pour toi.<br/><br/>
+
+            <div className="text-left">
+            ➤ Fin <span style={{ color: "#FDA232", fontFamily: "Special Elite" }}>2022</span>, je démarre ma réflexion et mes premiers essais en HTML et CSS.<br/>
+            ➤ <span style={{ color: "#FDA232", fontFamily: "Special Elite" }}>2023</span>, montage du dossier de financement avec Transition Pro.<br/>
+            ➤ <span style={{ color: "#FDA232", fontFamily: "Special Elite" }}>2024</span>, formation DWWM chez O'Clock.<br/>
+            ➤ <span style={{ color: "#FDA232", fontFamily: "Special Elite" }}>2025</span>, <strong style={{ color: "#FDA232", fontFamily: "Special Elite" }}>GO !</strong> Alternance CDA chez Simplon et poste de testeuse QA fonctionnel/automatisé.<br/><br/>
+          </div>
+          Et maintenant ? Direction <span style={{ color: "#FDA232", fontFamily: "Special Elite" }}>avril 2027</span> avec une mission :
+          <span style={{ color: "#FDA232", fontFamily: "Special Elite" }}> continuer d'apprendre</span>, coder avec curiosité et plaisir.
         </motion.p>
+
+
       </div>
 
       {/* Image CV à droite, agrandie */}
-      <div
+      {/* <div
         className="flex-shrink-0 flex flex-col items-center justify-center w-full lg:w-1/4 cursor-zoom-in mt-6 lg:mt-0"
         onClick={() => setIsModalOpenCV(true)}
       >
@@ -169,7 +92,7 @@ const Profile = () => {
         >
           Télécharger le CV
         </a>
-      </div>
+      </div> */}
     </section>
 
       {/* Modal mascotte */}
@@ -194,7 +117,7 @@ const Profile = () => {
       )}
 
       {/* Modal CV */}
-      {isModalOpenCV && (
+      {/* {isModalOpenCV && (
         <motion.div
           className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
           initial={{ opacity: 0 }}
@@ -212,7 +135,7 @@ const Profile = () => {
             transition={{ duration: 0.3 }}
           />
         </motion.div>
-      )}
+      )} */}
     </div>
   );
 };
