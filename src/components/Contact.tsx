@@ -106,7 +106,7 @@ const ContactIcons = () => {
         <div className="fixed inset-0 bg-[#227265] bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-[#1D232A] p-6 rounded-lg text-center">
             <h3 className="text-xl text-white">Mon numéro de téléphone</h3> {/* Texte en blanc */}
-            <p className="text-lg mt-2 text-white">06 11 18 85 66</p> {/* Texte en blanc */}
+            <p className="text-lg mt-2 text-white">Merci d'utiliser les autres moyens de contact dans un premier temps</p> {/* Texte en blanc */}
             <button 
               className="mt-4 px-4 py-2 bg-[#227265] text-white rounded" 
               onClick={() => setShowPhoneModal(false)}
